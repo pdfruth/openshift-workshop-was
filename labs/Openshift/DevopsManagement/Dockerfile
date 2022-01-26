@@ -1,10 +1,10 @@
 ## Build stage
-FROM maven:latest AS builder
+FROM docker.io/maven:latest AS builder
 COPY app/ /
 RUN cd CustomerOrderServicesProject && mvn clean package
 
 ## Application image
-FROM openliberty/open-liberty:full-java8-openj9-ubi
+FROM docker.io/openliberty/open-liberty:full-java8-openj9-ubi
 
 COPY --chown=1001:0 resources/ /opt/ol/wlp/usr/shared/resources/
 
