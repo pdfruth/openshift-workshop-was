@@ -4,4 +4,4 @@ metadata:
   name: cos-config
 data:
   SEC_TLS_TRUSTDEFAULTCERTS: "true"
-  DB_HOST : "cos-db-liberty.db.svc"
+  DB_HOST : "pdf-cosdb.pdf-cosdb.svc
