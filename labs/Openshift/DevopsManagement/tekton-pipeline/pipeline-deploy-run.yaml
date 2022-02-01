@@ -5,13 +5,13 @@ metadata:
 spec:
   params:
     - name: BUILDER_IMAGE
-      value: 'quay.io/buildah/stable:v1.11.0'
+      value: 'quay.io/buildah/stable:latest'
     - name: TLSVERIFY
       value: 'false'
     - name: target-namespace
       value: dev
     - name: repo-url
-      value: https://github.com/IBMTechSales/openshift-workshop-was
+      value: https://github.com/pdfruth/openshift-workshop-was
   pipelineRef:
     name: tutorial-pipeline
   workspaces:
