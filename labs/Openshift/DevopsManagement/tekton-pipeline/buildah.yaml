@@ -9,7 +9,7 @@ spec:
     description: Reference of the image buildah will produce.
   - name: BUILDER_IMAGE
     description: The location of the buildah builder image.
-    default: quay.io/buildah/stable:v1.11.0
+    default: quay.io/buildah/stable:latest
   - name: DOCKERFILE
     description: Path to the Dockerfile to build.
     default: ./Dockerfile
@@ -25,7 +25,7 @@ spec:
 
   steps:
   - name: build
-    image: quay.io/buildah/stable:v1.11.0
+    image: quay.io/buildah/stable:latest
     workingDir: $(workspaces.source.path)
     command: ['buildah', 'bud', '--tls-verify=false', '--format=docker', '-f', './Dockerfile', '-t', $(params.IMAGE), $(params.CONTEXT)]
     volumeMounts:
@@ -35,7 +35,7 @@ spec:
       privileged: true
 
   - name: push
-    image: quay.io/buildah/stable:v1.11.0
+    image: quay.io/buildah/stable:latest
     workingDir: $(workspaces.source.path)
     command: ['buildah', 'push', '--tls-verify=false', $(params.IMAGE), $(params.IMAGE)]
     volumeMounts:
