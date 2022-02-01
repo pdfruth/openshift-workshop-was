@@ -9,7 +9,7 @@ spec:
       description: The git repository URL to clone from
     - name: BUILDER_IMAGE
       description: Image used to do the build
-      default: quay.io/buildah/stable:v1.11.0
+      default: quay.io/buildah/stable:latest
     - name: TLSVERIFY
       description: True or False for TLS Verificatoin
       default: "false"
@@ -44,7 +44,7 @@ spec:
         - name: CONTEXT
           value: $(workspaces.source.path)/labs/Openshift/DevopsManagement
         - name: BUILDER_IMAGE
-          value: "quay.io/buildah/stable:v1.11.0"
+          value: "quay.io/buildah/stable:latest"
         - name: TLSVERIFY
           value: "false"
       runAfter:
