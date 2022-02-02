@@ -11,7 +11,7 @@
 
 	<dataSource id="OrderDS" jndiName="jdbc/orderds" type="javax.sql.XADataSource">
 		<jdbcDriver libraryRef="DB2Lib"/>
-		<properties.db2.jcc databaseName="ORDERDB" password="${DB_PASSWORD}" portNumber="${DB_PORT}" serverName="${DB_HOST}" user="${DB_USER}"/>
+		<properties.db2.jcc databaseName="COSDB" password="${DB_PASSWORD}" portNumber="${DB_PORT}" serverName="${DB_HOST}" user="${DB_USER}"/>
 		<connectionManager agedTimeout="-1" connectionTimeout="180" maxIdleTime="1800" maxPoolSize="10" minPoolSize="1" reapTime="180"/>
 	</dataSource>	
 	
